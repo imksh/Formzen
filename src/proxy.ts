@@ -5,7 +5,7 @@ export async function proxy(req: NextRequest) {
   const authResponse = await authMiddleware(req);
 
   if (authResponse) {
-    return authResponse;
+    return authResponse; 
   }
 }
 
