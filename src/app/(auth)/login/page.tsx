@@ -21,20 +21,12 @@ const providerOptions = [
   },
 ];
 
-const trustPoints = [
-  "Single sign-on ready for teams.",
-  "Fast access to dashboards, forms, and approvals.",
-  "Built for secure, audit-friendly workflows.",
-];
-
 export default function Login() {
   return (
-    <div className="relative overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.14),_transparent_30%),radial-gradient(circle_at_top_right,_rgba(16,185,129,0.12),_transparent_28%),linear-gradient(180deg,_rgba(2,6,23,0.04),_transparent)] text-base-content">
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:56px_56px] opacity-40" />
-
+    <div className="relative overflow-hidden  text-base-content">
       <main className="mx-auto flex min-h-screen w-full max-w-7xl items-center px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid w-full gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
-          <section className="hidden md:flex flex-col justify-between gap-8 rounded-[2rem] border border-base-300/80 bg-base-100/85 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:p-8 lg:p-10">
+        <div className="grid w-full gap-10 lg:grid-cols-2 lg:gap-12">
+          <section className="hidden md:flex flex-col justify-between gap-8 rounded-4xl border border-base-300/80 bg-base-100/85 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:p-8 lg:p-10">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-base-300 bg-base-200/70 px-4 py-2 text-sm font-medium text-base-content/75">
                 <span className="h-2 w-2 rounded-full bg-success" />
@@ -53,19 +45,6 @@ export default function Login() {
                   polished login experience built for day-to-day production use.
                 </p>
               </div>
-
-              {/* <div className="grid gap-4 sm:grid-cols-3">
-                {trustPoints.map((point) => (
-                  <article
-                    key={point}
-                    className="rounded-2xl border border-base-300/80 bg-base-200/60 p-4"
-                  >
-                    <p className="text-sm leading-6 text-base-content/70">
-                      {point}
-                    </p>
-                  </article>
-                ))}
-              </div> */}
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -77,8 +56,7 @@ export default function Login() {
                   24/7
                 </p>
                 <p className="mt-2 text-sm leading-6 text-base-content/65">
-                  Access your dashboard, review submissions, and publish updates
-                  whenever your team needs them.
+                  Manage forms and submissions anytime your team needs.
                 </p>
               </article>
 
@@ -90,27 +68,24 @@ export default function Login() {
                   SSO
                 </p>
                 <p className="mt-2 text-sm leading-6 text-base-content/65">
-                  Google and GitHub sign-in options keep onboarding simple for
-                  both operators and builders.
+                  Simple and secure sign-in with Google or GitHub.
                 </p>
               </article>
             </div>
           </section>
 
-          <section className="flex items-center">
-            <div className="w-full rounded-[2rem] border border-base-300/80 bg-base-100/95 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.1)] backdrop-blur-xl sm:p-8 lg:p-10">
-              <div className="space-y-2">
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-base-content/50">
-                  Welcome back
-                </p>
-                <h2 className="text-3xl font-semibold tracking-tight text-base-content">
-                  Continue to FormZen
-                </h2>
-                {/* <p className="text-base leading-7 text-base-content/65">
+          <section className="w-full rounded-4xl border border-base-300/80 bg-base-100/95 p-6 shadow-[0_24px_80px_rgba(15,23,42,0.1)] backdrop-blur-xl sm:p-8 lg:p-10 ">
+            <div className="space-y-2">
+              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-base-content/50">
+                Welcome back
+              </p>
+              <h2 className="text-3xl font-semibold tracking-tight text-base-content">
+                Continue to FormZen
+              </h2>
+              {/* <p className="text-base leading-7 text-base-content/65">
                   Use a provider or sign in with your email address to get back
                   into your workspace.
                 </p> */}
-              </div>
 
               <div className="mt-8 grid grid-cols-2 gap-3">
                 {providerOptions.map((provider) => {
@@ -120,21 +95,11 @@ export default function Login() {
                     <button
                       key={provider.name}
                       type="button"
-                      className="group flex w-full items-center justify-between rounded-2xl border border-base-300 bg-base-100 px-4 py-3.5 text-left transition duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                      className="flex items-center justify-center gap-3 rounded-2xl border border-base-300 bg-base-100 px-4 py-4 transition hover:border-primary hover:bg-base-200"
                     >
-                      <span className="flex items-center gap-3">
-                        <span className="flex h-11 w-11 items-center justify-center ">
-                          <Icon className="text-xl" aria-hidden="true" />
-                        </span>
-                        <span>
-                          <span className="block text-sm font-semibold text-base-content">
-                            {provider.name}
-                          </span>
-                          {/* <span className="block text-sm text-base-content/60">
-                            {provider.description}
-                          </span> */}
-                        </span>
-                      </span>
+                      <Icon className="text-xl" />
+
+                      <span className="font-medium">{provider.name}</span>
                     </button>
                   );
                 })}

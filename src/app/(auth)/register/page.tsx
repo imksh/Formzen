@@ -1,13 +1,12 @@
-import Link from "next/link";
+import RegisterForm from "@/app/(auth)/register/RegisterForm";
 
 export const metadata = {
   title: "Register",
+
   description:
-    "Create a FormZen workspace for your team and launch branded forms.",
+    "Create your FormZen account and start managing forms and workflows.",
 };
 
 export default function Register() {
-  return (
-    <h1>Register Page</h1>
-  );
+  return <RegisterForm />;
 }
