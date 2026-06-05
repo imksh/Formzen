@@ -50,11 +50,8 @@ export default function LandingPage() {
             <div className="space-y-6">
               <h1 className="max-w-3xl text-5xl font-black leading-tight tracking-tight sm:text-6xl">
                 Build forms,
-                <span className="text-primary">
-                  {" "}
-                  collect responses,
-                </span>{" "}
-                and manage workflows effortlessly.
+                <span className="text-primary"> collect responses,</span> and
+                manage workflows effortlessly.
               </h1>
 
               <p className="max-w-2xl text-lg leading-8 text-base-content/70">
@@ -87,9 +84,7 @@ export default function LandingPage() {
                   key={stat.label}
                   className="rounded-2xl border border-base-300 bg-base-100/80 p-5 shadow-sm"
                 >
-                  <h3 className="text-3xl font-bold">
-                    {stat.value}
-                  </h3>
+                  <h3 className="text-3xl font-bold">{stat.value}</h3>
 
                   <p className="mt-2 text-sm text-base-content/65">
                     {stat.label}
@@ -105,9 +100,7 @@ export default function LandingPage() {
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-base-content/50">
-                      Active Form
-                    </p>
+                    <p className="text-sm text-base-content/50">Active Form</p>
 
                     <h3 className="mt-1 text-xl font-bold">
                       Customer Feedback Survey
@@ -121,9 +114,7 @@ export default function LandingPage() {
 
                 <div className="space-y-4">
                   <div className="rounded-2xl border border-base-300 bg-base-200 p-4">
-                    <p className="text-sm font-medium">
-                      Overall Experience
-                    </p>
+                    <p className="text-sm font-medium">Overall Experience</p>
 
                     <div className="mt-3 flex gap-2">
                       {[1, 2, 3, 4, 5].map((star) => (
@@ -136,9 +127,7 @@ export default function LandingPage() {
                   </div>
 
                   <div className="rounded-2xl border border-base-300 bg-base-200 p-4">
-                    <p className="text-sm font-medium">
-                      Additional Feedback
-                    </p>
+                    <p className="text-sm font-medium">Additional Feedback</p>
 
                     <div className="mt-3 h-24 rounded-xl bg-base-100" />
                   </div>
@@ -151,17 +140,11 @@ export default function LandingPage() {
             </div>
 
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-base-300 bg-base-100 p-5 shadow-xl lg:block">
-              <p className="text-sm text-base-content/50">
-                Responses Today
-              </p>
+              <p className="text-sm text-base-content/50">Responses Today</p>
 
-              <h3 className="mt-2 text-3xl font-bold">
-                1,284
-              </h3>
+              <h3 className="mt-2 text-3xl font-bold">1,284</h3>
 
-              <p className="mt-1 text-sm text-success">
-                +18% from yesterday
-              </p>
+              <p className="mt-1 text-sm text-success">+18% from yesterday</p>
             </div>
           </div>
         </div>
@@ -194,15 +177,10 @@ export default function LandingPage() {
               className="rounded-[2rem] border border-base-300 bg-base-100 p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-                <CheckCircle2
-                  className="text-primary"
-                  size={28}
-                />
+                <CheckCircle2 className="text-primary" size={28} />
               </div>
 
-              <h3 className="mt-6 text-2xl font-bold">
-                {feature.title}
-              </h3>
+              <h3 className="mt-6 text-2xl font-bold">{feature.title}</h3>
 
               <p className="mt-4 leading-7 text-base-content/70">
                 {feature.description}

@@ -5,15 +5,12 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import { useAuthStore } from "@/store/useAuthStore";
+import Loading from "@/components/Loading";
 
 export default function Home() {
   const router = useRouter();
 
-  const {
-    user,
-    checkAuth,
-    isCheckingAuth,
-  } = useAuthStore();
+  const { user, checkAuth, isCheckingAuth } = useAuthStore();
 
   useEffect(() => {
     checkAuth();
@@ -29,15 +26,11 @@ export default function Home() {
     } else {
       router.replace("/landing");
     }
-  }, [
-    user,
-    isCheckingAuth,
-    router,
-  ]);
+  }, [user, isCheckingAuth, router]);
 
   return (
     <div className="flex min-h-screen items-center justify-center">
-      <p>Loading...</p>
+      <Loading />
     </div>
   );
 }
