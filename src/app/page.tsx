@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"; 
 
 import { useAuthStore } from "@/store/useAuthStore";
 import Loading from "@/components/Loading";
